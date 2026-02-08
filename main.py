@@ -1,17 +1,18 @@
 import hashlib
 
 def login_system():
-    # Simple logic for Exercise A
-    user = input("Enter Role (Staff/Student): ")
-    password = "BethisC00l"
+    print("--- University Portal Login ---")
+    user_role = input("Enter Role (Staff/Student): ")
+    user_input_pw = input("Enter Password: ")
+
+    hashed_input = hashlib.sha256(user_input_pw.encode()).hexdigest()
     
-    # Hashing the password (Secure practice)
-    hashed = hashlib.sha256(password.encode()).hexdigest()
-    
-    if user == "Staff":
+    if user_role == "Staff":
         print("Welcome, Staff. Accessing Secure Records...")
-    else:
+    elif user_role == "Student":
         print("Welcome, Student. Accessing Library...")
+    else:
+        print("Access Denied.")
 
 if __name__ == "__main__":
     login_system()
