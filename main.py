@@ -1,18 +1,14 @@
-import hashlib
+ def manual_purchase():
+     print("--- MANUAL PURCHASE SYSTEM ---")
+     
+     input("Student (You): ")
+    print("Staff: Good day. What can I do for you?")
+     
+     input("Student (You): ")
+    print("Staff: The manual costs N3,200. Please pay.")
 
-def login_system():
-    print("--- University Portal Login ---")
-    user_role = input("Enter Role (Staff/Student): ")
-    user_input_pw = input("Enter Password: ")
+     input("Student (You): ")
+   print("Staff: Payment received. Here is your manual.")
 
-    hashed_input = hashlib.sha256(user_input_pw.encode()).hexdigest()
-    
-    if user_role == "Staff":
-        print("Welcome, Staff. Accessing Secure Records...")
-    elif user_role == "Student":
-        print("Welcome, Student. Accessing Library...")
-    else:
-        print("Access Denied.")
-
-if __name__ == "__main__":
-    login_system()
+     input("Student (You): ")
+    print("Staff: You're welcome. Goodbye.")
